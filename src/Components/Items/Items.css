@@ -22,3 +22,16 @@
 .time {
     color: #d62828;
 }
+
+.delete {
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.delete:hover {
+    color: #d62828;
+    transform: rotate(0.5turn);
+}

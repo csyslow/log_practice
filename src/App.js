@@ -25,8 +25,8 @@ const App = () => {
             time: '120'
         }
     ];
-    const [logsData,setLogsData] = useState(initialState)
- 
+    const [logsData, setLogsData] = useState(initialState)
+
 
     const saveLogsHandler = (newLogsData) => {
         newLogsData.id = Date.now() + '';
@@ -34,9 +34,17 @@ const App = () => {
         console.log(logsData)
     }
 
+    const deleteLogHandler = (index) => {
+        setLogsData(prevState => {
+            const newLogs = [...prevState];
+            newLogs.splice(index,1);
+            return newLogs
+        });
+    }
+
     return <div className="app">
-        <LogsForm  onSaveLogs={saveLogsHandler}/>
-        <Logs logsData={logsData} />
+        <LogsForm onSaveLogs={saveLogsHandler} />
+        <Logs logsData={logsData} onDelete={deleteLogHandler} />
     </div>
 }
 
