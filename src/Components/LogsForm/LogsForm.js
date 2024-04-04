@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from '../UI/Card/Card';
 import './LogsForm.css'
 
-const LogsForm = () => {
+const LogsForm = (props) => {
     //存储form数据
     const [inputDate, setInputDate] = useState('');
     const [inputDesc, setInputDesc] = useState('');
@@ -26,7 +26,7 @@ const LogsForm = () => {
     const formSubmitHandler = (event) => {
         //取消默认
         event.preventDefault();
-        //获取form数据
+        //获取form数据，整合到一个对象
         const newLogData = {
             date: new Date(inputDate),
             desc: inputDesc,
@@ -37,7 +37,11 @@ const LogsForm = () => {
         setInputDate('');
         setInputDesc('');
         setInputTime('');
+        //往父组件添加log
+        props.onSaveLogs(newLogData)
     }
+
+
 
     return (
         <Card className='logs-form'>
