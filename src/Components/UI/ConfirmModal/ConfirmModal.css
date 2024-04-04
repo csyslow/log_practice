@@ -37,15 +37,21 @@
     font-weight: bold;
     font-size: 20px;
     border-radius: 6px;
-}
-
-.confirm-btn .yes-btn {
-    background-color: #d62828;
-    color: white;
     transition: 0.5s;
     cursor: pointer;
+    background-color: #d62828;
+    color: white;
+}
+
+.confirm-btn .no-btn {
+    background-color: grey;;
+    
 }
 
 .yes-btn:hover {
+    background-color: black;
+}
+
+.no-btn:hover {
     background-color: black;
 }

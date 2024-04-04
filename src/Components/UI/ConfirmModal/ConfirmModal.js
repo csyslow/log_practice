@@ -7,11 +7,11 @@ const ConfirmModal = (props) => {
     return (
         <Card className='confirm-modal'>
             <div className='confirm-text'>
-                <p>Delete this log?</p>
+                <p>{props.confirmInfo}</p>
             </div>
             <div className='confirm-btn'>
-            <button className='yes-btn'>Yes</button>
-            <button>No</button>
+            <button className='yes-btn' onClick={props.onConfirm}>Yes</button>
+            <button className='no-btn' onClick={props.onCancel}>No</button>
             </div>
         </Card>)
 }
