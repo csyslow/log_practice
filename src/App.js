@@ -3,6 +3,7 @@ import './App.css';
 import Card from "./Components/UI/Card/Card";
 import LogsForm from "./Components/LogsForm/LogsForm";
 import { useState } from "react";
+import ConfirmModal from "./Components/UI/ConfirmModal/ConfirmModal";
 
 const App = () => {
     const initialState = [
