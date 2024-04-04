@@ -5,3 +5,9 @@
     margin: 50px auto;
     padding: 20px;
 }
+
+.no-logs {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+}

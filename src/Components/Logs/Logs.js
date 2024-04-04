@@ -17,7 +17,7 @@ const Logs = (props) => {
     
     return (
         <Card className='logs'>
-            {logsItemData}
+            {logsItemData.length !== 0 ? logsItemData : <p className='no-logs'>No Logs Now!</p>}
         </Card>
     );
 };
