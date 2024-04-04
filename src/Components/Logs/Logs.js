@@ -1,8 +1,9 @@
 import React from 'react';
 import Items from '../Items/Items';
 import './Logs.css';
+import Card from '../UI/Card/Card';
 
-const logs = () => {
+const Logs = () => {
 
     //data from server
     const logsData = [
@@ -28,12 +29,12 @@ const logs = () => {
     {/* 遍历 */ }
     const logsItemData = logsData.map((item => <Items key={item.id} desc={item.desc} date={item.date} time={item.time} />));
     return (
-        <div className='logs'>
+        <Card className='logs'>
             {logsItemData}
             {/* 属性名和参数名一样, 可以解构 */}
             {logsData.map((item => <Items key={item.id} {...item} />))}
-        </div>
+        </Card>
     );
 };
 
-export default logs;
+export default Logs;
