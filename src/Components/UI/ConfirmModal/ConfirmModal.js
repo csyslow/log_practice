@@ -2,7 +2,7 @@
 import Backdrop from '../Backdrop/Backdrop'
 import Card from '../Card/Card'
 import './ConfirmModal.css'
-Card
+
 
 const ConfirmModal = (props) => {
     return (

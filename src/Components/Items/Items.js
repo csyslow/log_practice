@@ -18,10 +18,12 @@ const Items = (props) => {
     }
 
     const confirmHandler = () => {
-
+        props.onDelete(props.logIndex)
     }
     return (
         <Card className='item'>
+
+            {/* Portal */}
             {showConfirm && <ConfirmModal 
             confirmInfo='Delete This Log?'
             onCancel={cancelHandler}
