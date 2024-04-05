@@ -4,6 +4,7 @@ import Card from "./Components/UI/Card/Card";
 import LogsForm from "./Components/LogsForm/LogsForm";
 import { useState } from "react";
 import ConfirmModal from "./Components/UI/ConfirmModal/ConfirmModal";
+import Backdrop from "./Components/UI/Backdrop/Backdrop";
 
 const App = () => {
     const initialState = [
