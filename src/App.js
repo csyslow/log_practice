@@ -36,10 +36,17 @@ const App = () => {
         console.log(logsData)
     }
 
-    const deleteLogHandler = (index) => {
+    // const deleteLogHandler = (index) => {
+    //     setLogsData(prevState => {
+    //         const newLogs = [...prevState];
+    //         newLogs.splice(index,1);
+    //         return newLogs
+    //     });
+    // }
+
+    const deleteLogHandler = (id) => {
         setLogsData(prevState => {
-            const newLogs = [...prevState];
-            newLogs.splice(index,1);
+            const newLogs = prevState.filter(item => item.id !== id);
             return newLogs
         });
     }

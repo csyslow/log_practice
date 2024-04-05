@@ -18,7 +18,8 @@ const Items = (props) => {
     }
 
     const confirmHandler = () => {
-        props.onDelete(props.logIndex)
+        props.onDelete(props.logId)
+        setShowConfirm(false)
     }
     return (
         <Card className='item'>
